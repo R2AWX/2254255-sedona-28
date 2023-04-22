@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
@@ -16,16 +17,16 @@
         <div class="nav__wrapper">
           <ul class="nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="site-list__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Фото и видео</a>
+              <a class="site-list__link" href="catalog.html">Фото и видео</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Форма отзыва</a>
+              <a class="site-list__link">Форма отзыва</a>
             </li>
             <li class="site-list__item">
-              <a href="https://htmlacademy.ru">HTML Academy</a>
+              <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -64,18 +65,17 @@
             </fieldset>
 
             <fieldset class="form-container__group contacts">
-              <legend class="form-container__legend">
+              <legend class="form-container__legend">Контактная информация:</legend>
                 <ul class="contacts__list">
                   <li class="contacts__item">
-                    <label class="contacts__label" for="user-phone"></label>
+                    <label class="contacts__label" for="user-phone">Контактный телефон*:</label>
                     <input class="contacts__form-field" type="number" id="user-phone" name="user-phone" placeholder="Введите телефон" required>
                   </li>
                   <li class="contacts__item">
-                    <label class="contacts__label" for="user-email"></label>
-                    <input class="contacts__label" type="email" id="user-email" name="user-email" placeholder="Введите e-mail" required>
+                    <label class="contacts__label" for="user-email">Электронная почта*:</label>
+                    <input class="contacts__form-field" type="email" id="user-email" name="user-email" placeholder="Введите e-mail" required>
                   </li>
                 </ul>
-              </legend>
             </fieldset>
           </div>
 
@@ -170,7 +170,7 @@
           </ul>
         </div>
         <div class="footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
+          <span class="copyright__text">Разработано:</span>
           <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
         </div>
       </div>
