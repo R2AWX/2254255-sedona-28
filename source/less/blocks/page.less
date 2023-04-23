@@ -9,11 +9,7 @@
   font-family: "PT Sans", "Arial", sans-serif;
   .font-size-description();
   color: @black;
-  background-color: @white;
-
-  @media (min-width: @desktop-width) {
-    background-color: @base-sheet;
-  }
+  background-color: @base-sheet;
 }
 
 .page__wrapper {
@@ -24,6 +20,7 @@
   width: @mobile-width;
   color: @black;
   background-color: @white;
+  box-shadow: 0 0 15px @shadow;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
@@ -31,6 +28,5 @@
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    box-shadow: 0 0 15px @shadow;
   }
 }
