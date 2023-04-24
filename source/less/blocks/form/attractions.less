@@ -5,3 +5,14 @@
 .attractions__description {
   .font-size-lead();
 }
+
+.attractions__list-wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

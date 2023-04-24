@@ -1,9 +1,33 @@
 .form-container {
   flex-grow: 1;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 120px;
+  }
 }
 
 .form-container__header-wrapper {
-  margin: 36px 20px 28px;
+  margin: 36px 0 28px;
+
+  @media (min-width: @tablet-width) {
+    margin: 64px 106px 108px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 115px 262px 68px;
+  }
+}
+
+.form-container__wrapper {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .form-container__legend,
