@@ -4,10 +4,29 @@
 
 .page__body {
   margin: 0;
-  width: 320px;
+  width: 100%;
   height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   .font-size-description();
   color: @black;
+  background-color: @base-sheet;
+}
+
+.page__wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: @mobile-width;
+  color: @black;
   background-color: @white;
+  box-shadow: 0 0 15px @shadow;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
