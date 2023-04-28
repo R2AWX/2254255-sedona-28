@@ -49,6 +49,18 @@
   border: none;
 }
 
+.form-container__button-wrapper {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.form-container__button {
+  .button();
+}
+
 .form-container__footnote {
   font-size: 12px;
   text-transform: uppercase;

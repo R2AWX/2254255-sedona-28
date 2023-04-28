@@ -15,3 +15,35 @@
   font-size: 14px;
   line-height: 21px;
 }
+
+.button() {
+  display: block;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 16px;
+  min-height: 58px;
+  color: @white;
+  background-color: @blue;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-active;
+    color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    background-color: @disabled;
+  }
+}

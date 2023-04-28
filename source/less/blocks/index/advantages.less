@@ -63,6 +63,10 @@
 .advantages__wrapper-service {
   padding-left: 47px;
 
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+  }
+
   .advantages__lead {
     text-align: start;
   }
@@ -76,6 +80,10 @@
   padding: 37px 18px;
   background-color: @blue;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+  }
 
   .advantages__description {
     color: inherit;
@@ -95,5 +103,6 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    min-height: 256px;
   }
 }
