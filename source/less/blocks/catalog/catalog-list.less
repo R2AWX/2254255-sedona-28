@@ -1,7 +1,6 @@
 .catalog-list__lead {
+  .font-size-description();
   font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
   text-transform: uppercase;
   margin: 0;
 }
@@ -11,8 +10,22 @@
   margin: 0;
 }
 
-.catalog-list__likes {
+.catalog-list__likes-wrapper {
+  position: relative;
+  padding-left: 37px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 32px;
+  }
+}
+
+.catalog-list__likes-icon {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  margin: auto;
+  fill: fade(@black, 30%);
 }
 
 .catalog-list__secondary-wrapper {

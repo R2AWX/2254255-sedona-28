@@ -1,3 +1,32 @@
 .copyright__text {
   text-transform: uppercase;
 }
+
+.copyright__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 35px;
+  padding: 7px 40px 7px 0;
+  text-decoration: none;
+  color: inherit;
+  fill: @black;
+
+  &:hover,
+  &:focus {
+    color: @blue;
+    fill: @blue;
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+    fill: fade(@black, 30%);
+  }
+}
+
+.copyright__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}

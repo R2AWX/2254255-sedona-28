@@ -1,5 +1,34 @@
 .social__list {
   .no-bullet();
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
+}
+
+.social__link {
+  position: relative;
+  display: block;
+  width: 48px;
+  min-height: 48px;
+  background-color: @blue;
+  fill: @white;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-active;
+    fill: fade(@white, 30%);
+  }
+}
+
+.social__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
