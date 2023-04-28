@@ -1,4 +1,5 @@
 .advantages__header-container {
+  position: relative;
   margin: 32px 18px 16px;
 
   @media (min-width: @tablet-width) {
@@ -7,6 +8,18 @@
 
   @media (min-width: @desktop-width) {
     margin: 59px 358px 44px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .advantages__header-container::after {
+    content: "";
+    position: absolute;
+    bottom: -37px;
+    right: -18px;
+    left: -18px;
+    height: 37px;
+    background: no-repeat center url("../img/index-triangle.svg");
   }
 }
 
