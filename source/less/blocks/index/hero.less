@@ -1,9 +1,30 @@
 .hero__wrapper {
-  background: bottom center url("../img/back-mobile.jpg");
+  position: relative;
+  background: no-repeat center url("../img/back-desktop.jpg") @shadow;
+  background-size: cover;
   width: @mobile-width;
   height: 389px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    height: 518px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.hero__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 57px;
+  background: no-repeat center url("../img/intro-triangle.svg");
 }
