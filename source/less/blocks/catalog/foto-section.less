@@ -22,14 +22,14 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-
-  @media (max-width: @mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
 }
 
 .foto-section__list {
   .no-bullet();
+}
+
+.foto-section__br {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }

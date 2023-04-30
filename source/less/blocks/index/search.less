@@ -23,12 +23,6 @@
   text-align: center;
   margin: 0 11px 32px;
 
-  @media (max-width: @mobile-width-only) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
   }
@@ -36,4 +30,10 @@
 
 .search__button {
   .button();
+}
+
+.search__br {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
