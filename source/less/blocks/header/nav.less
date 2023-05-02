@@ -1,7 +1,100 @@
+.nav {
+  position: relative;
+  width: auto;
+  min-height: 56px;
+  background-color: @white;
+}
+
 .nav__toggle {
-  padding: 17px 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: block;
+  width: 68px;
+  height: 56px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.nav--closed .nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 4px;
+  background-color: @blue;
+  box-shadow: 0 9px 0 0 @blue, 0 18px 0 0 @blue;
+}
+
+.nav--closed .nav__toggle:hover::before,
+.nav--closed .nav__toggle:focus::before {
+  background-color: fade(@blue, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@blue, 60%),
+    0 18px 0 0 fade(@blue, 60%);
+}
+
+.nav--closed .nav__toggle:active::before {
+  background-color: fade(@blue, 30%);
+  box-shadow:
+    0 9px 0 0 fade(@blue, 30%),
+    0 18px 0 0 fade(@blue, 30%);
+}
+
+.nav--opened .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    right: 16px;
+    width: 27px;
+    height: 4px;
+    background-color: @white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: fade(@white, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@white, 30%);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--opened .nav__list {
+    z-index: 2;
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__list {
+    display: relative;
   }
 }

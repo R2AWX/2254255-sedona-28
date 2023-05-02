@@ -1,4 +1,5 @@
 .advantages__header-container {
+  position: relative;
   margin: 32px 18px 16px;
 
   @media (min-width: @tablet-width) {
@@ -7,6 +8,18 @@
 
   @media (min-width: @desktop-width) {
     margin: 59px 358px 44px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .advantages__header-container::after {
+    content: "";
+    position: absolute;
+    bottom: -37px;
+    right: -18px;
+    left: -18px;
+    height: 37px;
+    background: no-repeat center url("../img/index-triangle.svg");
   }
 }
 
@@ -50,6 +63,10 @@
 .advantages__wrapper-service {
   padding-left: 47px;
 
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+  }
+
   .advantages__lead {
     text-align: start;
   }
@@ -63,6 +80,10 @@
   padding: 37px 18px;
   background-color: @blue;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+  }
 
   .advantages__description {
     color: inherit;
@@ -82,5 +103,6 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    min-height: 256px;
   }
 }

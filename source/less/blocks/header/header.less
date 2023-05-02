@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  min-height: 56px;
 }
 
 .header__logo {
@@ -15,11 +14,32 @@
 }
 
 .header__hero-container {
-  background: bottom url("../img/back-mobile.jpg");
-  width: @mobile-width;
+  background: no-repeat url("../img/back-desktop.jpg") @shadow;
+  background-position: center bottom;
   height: 158px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: @mobile-width-only) {
+    background-size: 282%;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 301px;
+  }
+}
+
+.header__hero-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 57px;
+  background: no-repeat center url("../img/intro-triangle.svg");
 }
