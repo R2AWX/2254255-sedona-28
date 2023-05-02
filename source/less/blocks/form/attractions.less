@@ -3,7 +3,11 @@
 }
 
 .attractions__description {
-  .font-size-lead();
+  .font-size-lead-mobile();
+
+  @media (min-width: @tablet-width) {
+    .font-size-lead();
+  }
 }
 
 .attractions__list-wrapper {

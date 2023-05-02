@@ -8,6 +8,10 @@
 }
 
 .contacts__form-field {
-  .font-size-lead();
+  .font-size-lead-mobile();
   opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    .font-size-lead();
+  }
 }

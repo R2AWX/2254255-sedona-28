@@ -8,5 +8,9 @@
 }
 
 .full-name__form-field {
-  .font-size-lead();
+  .font-size-lead-mobile();
+
+  @media (min-width: @tablet-width) {
+    .font-size-lead();
+  }
 }
