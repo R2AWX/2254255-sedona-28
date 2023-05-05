@@ -81,6 +81,7 @@
 }
 
 .advantages__wrapper-wide {
+  box-sizing: border-box;
   padding: 37px 18px;
   background-color: @blue;
   color: @white;
@@ -111,16 +112,19 @@
   }
 }
 
-.advantages__photo-city {
-  object-fit: cover;
+@media (min-width: @tablet-width) {
+  .advantages__wide-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  // @media (min-width: @tablet-width) {
-  //   width: 512px;
-  //   height: 256px;
-  // }
+  .advantages__photo-city {
+    grid-column: ~"2 / 4";
+  }
 
-  // @media (min-width: @desktop-width) {
-  //   width: 800px;
-  //   height: 256px;
-  // }
+  .advantages__photo-bridge {
+    grid-column: ~"1 / 3";
+    grid-row: 1;
+  }
 }
+
