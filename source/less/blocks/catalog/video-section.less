@@ -1,20 +1,25 @@
 .video-section__wrapper {
-  margin: 17px 27px 38px;
+  margin: 0 27px 38px;
 
   @media (min-width: @tablet-width) {
-    margin: 58px 101px 66px;
+    margin: 0 101px 66px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 62px 377px 64px;
+    margin: 0 377px 64px;
   }
 }
 
 .video-section__lead {
-  .font-size-lead();
+  .font-size-lead-mobile();
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    .font-size-lead();
+  }
 }
 
 .video-section__description {

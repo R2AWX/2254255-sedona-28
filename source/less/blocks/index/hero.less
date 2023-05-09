@@ -1,6 +1,6 @@
 .hero__wrapper {
   position: relative;
-  background: no-repeat center url("../img/back-desktop.jpg") @shadow;
+  background: no-repeat center url("../img/hero/back-desktop@1x.jpg") @shadow;
   background-size: cover;
   width: @mobile-width;
   height: 389px;
@@ -8,6 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/back-desktop@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
@@ -26,5 +30,5 @@
   right: 0;
   left: 0;
   height: 57px;
-  background: no-repeat center url("../img/intro-triangle.svg");
+  background: no-repeat center url("../img/hero/intro-triangle.svg");
 }

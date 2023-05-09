@@ -32,10 +32,14 @@
 
 .form-container__legend,
 .form-container__lead {
-  .font-size-lead();
+  .font-size-lead-mobile();
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .font-size-lead();
+  }
 }
 
 .form-container__description {

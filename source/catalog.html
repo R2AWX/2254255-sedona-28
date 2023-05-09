@@ -10,7 +10,7 @@
     <div class="page__wrapper">
       <header class="header">
         <a class="header__logo" href="index.html">
-          <img src="img/logo.svg" width="185" height="96" alt="Логотип City of Sedona.">
+          <img src="img/header/logo.svg" width="185" height="96" alt="Логотип City of Sedona.">
         </a>
 
         <nav class="nav nav--closed nav--nojs">
@@ -37,7 +37,10 @@
         </nav>
 
         <div class="header__hero-container">
-          <img src="img/SEDONA.svg" width="229" height="39" alt="SEDONA">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/header/sedona.svg" width="457" height="78">
+            <img src="img/header/sedona-mobile.svg" width="229" height="39" alt="SEDONA">
+          </picture>
         </div>
       </header>
 
@@ -50,60 +53,83 @@
 
           <ul class="foto-section__list foto-section__list-wrapper catalog-list">
             <li class="foto-section__item catalog-list__item">
-              <img src="" alt="">
-              <div class="catalog-list__wrapper">
-                <h2 class="catalog-list__lead">Неродные просторы</h2>
-                <p class="catalog-list__description">Автор фото: Борис</p>
-              </div>
-
-              <div class="catalog-list__likes-wrapper">
-                <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
-                  <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
-                </svg>
-                <span>1350</span>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop@1x.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x" width="1200" height="400">
+                <source media="(min-width: 768px)" srcset="img/catalog/photo-1-tablet@1x.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x" width="648" height="400">
+                <img src="img/catalog/photo-1-mobile@1x.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на фоне рассвета.">
+              </picture>
+              <div class="catalog-list__label">
+                <div class="catalog-list__wrapper">
+                  <h2 class="catalog-list__lead">Неродные просторы</h2>
+                  <p class="catalog-list__description">Автор фото: Борис</p>
+                </div>
+                <div class="catalog-list__likes-wrapper">
+                  <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
+                    <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
+                  </svg>
+                  <span>1350</span>
+                </div>
               </div>
             </li>
+
             <div class="catalog-list__secondary-wrapper">
               <li class="foto-section__item catalog-list__item">
-                <img src="" alt="">
-                <div class="catalog-list__wrapper">
-                  <h2 class="catalog-list__lead">Местная растительность</h2>
-                  <p class="catalog-list__description">Автор фото: Сергей</p>
-                </div>
-
-                <div class="catalog-list__likes-wrapper">
-                  <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
-                    <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
-                  </svg>
-                  <span>143</span>
-                </div>
-              </li>
-              <li class="foto-section__item catalog-list__item">
-                <img src="" alt="">
-                <div class="catalog-list__wrapper">
-                  <h2 class="catalog-list__lead">Дорога на север</h2>
-                  <p class="catalog-list__description">Автор фото: Петр</p>
-                </div>
-
-                <div class="catalog-list__likes-wrapper">
-                  <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
-                    <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
-                  </svg>
-                  <span>96</span>
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop@1x.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x" width="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-2-tablet@1x.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x" width="324" height="267">
+                  <img src="img/catalog/photo-2-mobile@1x.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне гор.">
+                </picture>
+                <div class="catalog-list__label">
+                  <div class="catalog-list__wrapper">
+                    <h2 class="catalog-list__lead">Местная растительность</h2>
+                    <p class="catalog-list__description">Автор фото: Сергей</p>
+                  </div>
+                  <div class="catalog-list__likes-wrapper">
+                    <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
+                      <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
+                    </svg>
+                    <span>143</span>
+                  </div>
                 </div>
               </li>
-              <li class="foto-section__item catalog-list__item">
-                <img src="" alt="">
-                <div class="catalog-list__wrapper">
-                  <h2 class="catalog-list__lead">Мост Дьявола</h2>
-                  <p class="catalog-list__description">Автор фото: Антон</p>
-                </div>
 
-                <div class="catalog-list__likes-wrapper">
-                  <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
-                    <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
-                  </svg>
-                  <span>256</span>
+              <li class="foto-section__item catalog-list__item">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop@1x.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x" width="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-3-tablet@1x.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x" width="324" height="267">
+                  <img src="img/catalog/photo-3-mobile@1x.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне гор.">
+                </picture>
+                <div class="catalog-list__label">
+                  <div class="catalog-list__wrapper">
+                    <h2 class="catalog-list__lead">Дорога на север</h2>
+                    <p class="catalog-list__description">Автор фото: Петр</p>
+                  </div>
+                  <div class="catalog-list__likes-wrapper">
+                    <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
+                      <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
+                    </svg>
+                    <span>96</span>
+                  </div>
+                </div>
+              </li>
+
+              <li class="foto-section__item catalog-list__item">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop@1x.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x" width="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet@1x.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x" width="324" height="267">
+                  <img src="img/catalog/photo-4-mobile@1x.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Кактус на фоне гор.">
+                </picture>
+                <div class="catalog-list__label">
+                  <div class="catalog-list__wrapper">
+                    <h2 class="catalog-list__lead">Мост Дьявола</h2>
+                    <p class="catalog-list__description">Автор фото: Антон</p>
+                  </div>
+                  <div class="catalog-list__likes-wrapper">
+                    <svg class="catalog-list__likes-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="23" height="21" viewBox="0 0 23 21">
+                      <path d="m12.96 3.78-.62 3.05-.63 2.62h9.09v2.2l-3.03 7.25h-9.4V8.4l4.6-4.62ZM2.1 10.5v8.4-8.4ZM13.8 0 6.9 6.93c-.42.32-.63.84-.63 1.47v10.5c0 1.16.94 2.1 2.1 2.1h9.4c.84 0 1.57-.52 1.88-1.26l3.14-7.45c.1-.21.1-.53.1-.74v-2.1H23a2.1 2.1 0 0 0-2.1-2.1h-6.58l1.05-4.83v-.31c0-.43-.21-.84-.42-1.16L13.8 0ZM4.18 8.4H0V21h4.18V8.4Z"/>
+                    </svg>
+                    <span>256</span>
+                  </div>
                 </div>
               </li>
             </div>
