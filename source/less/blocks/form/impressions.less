@@ -1,3 +1,40 @@
+.impressions {
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.impressions::before,
+.impressions::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -40px;
+    width: 123px;
+    border-top: 1px solid @disabled;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .impressions::before {
+    left: 0;
+  }
+
+  .impressions::after {
+    right: 0;
+  }
+}
+
 .impressions__list {
   .no-bullet();
 }

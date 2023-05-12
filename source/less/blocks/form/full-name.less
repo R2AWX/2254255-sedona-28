@@ -1,3 +1,24 @@
+@media (max-width: @mobile-width-only) {
+  .full-name {
+    margin-bottom: 64px;
+  }
+}
+
+.full-name::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -62px;
+    right: -17px;
+    bottom: -8px;
+    border-right: 1px solid @disabled;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -24px;
+  }
+}
+
 .full-name__list {
   .no-bullet();
 }

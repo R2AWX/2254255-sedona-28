@@ -1,3 +1,36 @@
+.comment {
+  margin-bottom: 56px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.comment::before,
+.comment::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -40px;
+    width: 123px;
+    border-top: 1px solid @disabled;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment::before {
+    left: 0;
+  }
+
+  .comment::after {
+    right: 0;
+  }
+}
+
 .comment__form-field {
   .font-size-lead-mobile();
   opacity: 0.3;
