@@ -197,24 +197,25 @@
 .advantages__wrapper-house::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -7px;
   left: 0;
-  background: no-repeat url("../img/index/icon-house-mobile.svg");
+  mask-image: url("../img/sprite.svg#icon-house");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @blue;
   width: 40px;
-  height: 40px;
+  height: 38px;
 
   @media (min-width: @tablet-width) {
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    background: no-repeat url("../img/index/icon-house-table.svg");
     width: 78px;
     height: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    background: no-repeat url("../img/index/icon-house-desktop.svg");
     width: 81px;
     height: 73px;
   }
@@ -234,24 +235,25 @@
 .advantages__wrapper-burger::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -6px;
   left: 0;
-  background: no-repeat url("../img/index/icon-burger-mobile.svg");
+  mask-image: url("../img/sprite.svg#icon-burger");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @blue;
   width: 40px;
-  height: 40px;
+  height: 36px;
 
   @media (min-width: @tablet-width) {
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    background: no-repeat url("../img/index/icon-burger-table.svg");
     width: 82px;
     height: 68px;
   }
 
   @media (min-width: @desktop-width) {
-    background: no-repeat url("../img/index/icon-burger-desktop.svg");
     width: 74px;
     height: 69px;
   }
@@ -272,24 +274,25 @@
 .advantages__wrapper-gift::before {
   content: "";
   position: absolute;
-  top: -8px;
-  left: 0;
-  background: no-repeat url("../img/index/icon-gift-mobile.svg");
-  width: 40px;
-  height: 40px;
+  top: -7px;
+  left: 4px;
+  mask-image: url("../img/sprite.svg#icon-gift");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @blue;
+  width: 32px;
+  height: 38px;
 
   @media (min-width: @tablet-width) {
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    background: no-repeat url("../img/index/icon-gift-table.svg");
     width: 67px;
     height: 75px;
   }
 
   @media (min-width: @desktop-width) {
-    background: no-repeat url("../img/index/icon-gift-desktop.svg");
     width: 78px;
     height: 76px;
   }
