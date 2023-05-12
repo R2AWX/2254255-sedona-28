@@ -26,12 +26,23 @@
 .full-name__label {
   color: @dark-gray;
   text-transform: uppercase;
+  margin-left: 16px;
 }
 
 .full-name__form-field {
   .font-size-lead-mobile();
+  height: 58px;
+  width: 100%;
+  background-color: @base-sheet;
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     .font-size-lead();
   }
+}
+
+.full-name__item:not(:last-child) {
+  margin-bottom: 16px;
 }

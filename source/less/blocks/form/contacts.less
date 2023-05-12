@@ -5,13 +5,27 @@
 .contacts__label {
   color: @dark-gray;
   text-transform: uppercase;
+  margin-left: 16px;
 }
 
 .contacts__form-field {
   .font-size-lead-mobile();
-  opacity: 0.3;
+  height: 58px;
+  width: 100%;
+  background-color: @base-sheet;
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     .font-size-lead();
   }
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.contacts__form-field::placeholder {
+  opacity: 0.3;
 }

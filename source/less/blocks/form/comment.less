@@ -33,9 +33,20 @@
 
 .comment__form-field {
   .font-size-lead-mobile();
-  opacity: 0.3;
+  height: 150px;
+  width: 100%;
+  background-color: @base-sheet;
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
+  resize: none;
 
   @media (min-width: @tablet-width) {
     .font-size-lead();
+    height: 160px;
   }
+}
+
+.comment__form-field::placeholder {
+  opacity: 0.3;
 }
