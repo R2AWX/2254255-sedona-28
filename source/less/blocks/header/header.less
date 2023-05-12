@@ -39,6 +39,16 @@
   }
 }
 
+.header__img {
+  width: 229px;
+  height: 39px;
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+}
+
 .header__hero-container::after {
   content: "";
   position: absolute;
@@ -46,5 +56,8 @@
   right: 0;
   left: 0;
   height: 57px;
-  background: no-repeat center url("../img/hero/intro-triangle.svg");
+  mask-image: url("../img/sprite.svg#intro-triangle");
+  mask-position: center;
+  mask-size: 1200px 57px;
+  background-color: @white;
 }
