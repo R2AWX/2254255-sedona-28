@@ -15,11 +15,32 @@
   background-color: @base-sheet;
   border: none;
   padding: 16px;
+  padding-right: 74px;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @disabled;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     .font-size-lead();
   }
+}
+
+.contacts__form-field::-webkit-outer-spin-button,
+.contacts__form-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.contacts__form-field[type="number"] {
+  appearance: textfield;
+}
+
+.contacts__item {
+  position: relative;
 }
 
 .contacts__item:not(:last-child) {
@@ -28,4 +49,36 @@
 
 .contacts__form-field::placeholder {
   opacity: 0.3;
+}
+
+.contacts__item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 58px;
+  height: 58px;
+  background-color: @form-decoration-wrapper;
+}
+
+.contacts__item--phone::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 18px;
+  height: 18px;
+  mask-image: url("../img/sprite.svg#phone");
+  background-color: @black;
+}
+
+.contacts__item--email::after {
+  content: "";
+  position: absolute;
+  right: 21px;
+  bottom: 23px;
+  width: 16px;
+  height: 12px;
+  mask-image: url("../img/sprite.svg#email");
+  background-color: @black;
 }

@@ -38,6 +38,12 @@
   padding: 16px;
   box-sizing: border-box;
 
+  &:hover,
+  &:focus {
+    background-color: @disabled;
+    outline: none;
+  }
+
   @media (min-width: @tablet-width) {
     .font-size-lead();
   }
