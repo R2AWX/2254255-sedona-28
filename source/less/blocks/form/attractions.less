@@ -1,3 +1,46 @@
+.attractions {
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .attractions::before {
+    top: -96px;
+  }
+}
+
+.attractions::before,
+.attractions::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -54px;
+    width: 123px;
+    border-top: 1px solid @disabled;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .attractions::before {
+    left: 0;
+  }
+
+  .attractions::after {
+    right: 0;
+  }
+}
+
 .attractions__list {
   .no-bullet();
 }
@@ -11,12 +54,53 @@
 }
 
 .attractions__list-wrapper {
+  display: grid;
+  gap: 16px;
+
   @media (min-width: @tablet-width) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    gap: 64px;
   }
+}
+
+.attractions__label {
+  position: relative;
+  display: flex;
+  height: 46px;
+  align-items: center;
+  padding-left: 62px;
+}
+
+.attractions__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  background-color: @base-sheet;
+  border-radius: 4px;
+}
+
+.attractions__label:hover .attractions__mark {
+  background-color: @disabled;
+}
+
+.attractions__input:focus + .attractions__mark {
+  background-color: @disabled;
+}
+
+.attractions__input:checked + .attractions__mark::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 23px;
+  height: 16px;
+  mask-image: url("../img/sprite.svg#mark");
+  background-color: @dark-gray;
 }

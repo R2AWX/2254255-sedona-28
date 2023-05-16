@@ -1,3 +1,24 @@
+@media (max-width: @mobile-width-only) {
+  .full-name {
+    margin-bottom: 64px;
+  }
+}
+
+.full-name::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: -62px;
+    right: -17px;
+    bottom: -8px;
+    border-right: 1px solid @disabled;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: -24px;
+  }
+}
+
 .full-name__list {
   .no-bullet();
 }
@@ -5,12 +26,29 @@
 .full-name__label {
   color: @dark-gray;
   text-transform: uppercase;
+  margin-left: 16px;
 }
 
 .full-name__form-field {
   .font-size-lead-mobile();
+  height: 58px;
+  width: 100%;
+  background-color: @base-sheet;
+  border: none;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: @disabled;
+    outline: none;
+  }
 
   @media (min-width: @tablet-width) {
     .font-size-lead();
   }
+}
+
+.full-name__item:not(:last-child) {
+  margin-bottom: 16px;
 }

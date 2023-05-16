@@ -11,8 +11,17 @@
   }
 }
 
+.form-container__personal-data-wrapper {
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 64px;
+  }
+}
+
 .form-container__header-wrapper {
-  margin: 36px 0 28px;
+  position: relative;
+  margin: 36px 0 53px;
 
   @media (min-width: @tablet-width) {
     margin: 64px 106px 108px;
@@ -24,9 +33,18 @@
 }
 
 .form-container__wrapper {
+  margin-bottom: 59px;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 50px;
+    margin-bottom: 71px;
   }
 }
 
@@ -42,6 +60,15 @@
   }
 }
 
+.form-container__legend {
+  padding: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
+}
+
 .form-container__description {
   color: @dark-gray;
   text-transform: uppercase;
@@ -50,7 +77,21 @@
 }
 
 .form-container__group {
+  position: relative;
   border: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form-container__group::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -20px;
+    right: -20px;
+    border-top: 1px solid @disabled;
+  }
 }
 
 .form-container__button-wrapper {
@@ -58,6 +99,7 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
   }
 }
 
