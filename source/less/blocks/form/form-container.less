@@ -15,7 +15,7 @@
   margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 64px;
+    margin-bottom: 61px;
   }
 }
 
@@ -24,7 +24,7 @@
   margin: 36px 0 53px;
 
   @media (min-width: @tablet-width) {
-    margin: 64px 106px 108px;
+    margin: 64px 106px 107px;
   }
 
   @media (min-width: @desktop-width) {
@@ -38,12 +38,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
+    gap: 58px;
     margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 50px;
+    gap: 100px;
     margin-bottom: 71px;
   }
 }
@@ -54,10 +54,6 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-
-  @media (min-width: @tablet-width) {
-    .font-size-lead();
-  }
 }
 
 .form-container__legend {
@@ -65,7 +61,21 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    .font-size-lead();
     margin-bottom: 28px;
+  }
+}
+
+.form-container__lead {
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    .font-size-title();
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 31px;
   }
 }
 
@@ -101,10 +111,15 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 96px;
+  }
 }
 
 .form-container__button {
   .button();
+  margin-bottom: 3px;
 }
 
 .form-container__footnote {
@@ -113,4 +128,10 @@
   text-align: end;
   margin: 0;
   opacity: 0.6;
+
+
+  @media (min-width: @tablet-width) {
+    .font-size-description();
+    margin-top: 6px;
+  }
 }

@@ -26,14 +26,10 @@
 }
 
 .modal-success__text-wrapper {
-  margin: 44px 38px 34px;
+  margin: 45px 38px;
 
   @media (min-width: @tablet-width) {
-    margin: 53px 98px 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 51px 98px 28px;
+    margin: 52px 98px;
   }
 }
 
@@ -42,10 +38,10 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    .font-size-lead();
+    .font-size-title();
     margin-bottom: 28px;
   }
 }
@@ -69,4 +65,8 @@
 .modal-success__button {
   .button();
   width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 18px;
+  }
 }

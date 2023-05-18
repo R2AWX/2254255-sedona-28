@@ -42,11 +42,12 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    .font-size-lead();
+    .font-size-title();
     margin-bottom: 28px;
+    line-height: 40px;
   }
 }
 
@@ -68,4 +69,18 @@
 .modal-failure__button {
   .button();
   width: 100%;
+
+  @media (max-width: @mobile-width-only) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    line-height: 40px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .modal-failure__br {
+    display: none;
+  }
 }
