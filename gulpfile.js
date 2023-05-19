@@ -70,10 +70,11 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () =>
-gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
-.pipe(svgo())
-.pipe(gulp.dest('build/img'));
+const svg = () => {
+  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+}
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
