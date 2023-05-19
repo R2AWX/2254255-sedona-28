@@ -3,7 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
-import csso from 'gulp-postcss';
+import csso from 'postcss-csso';
 import rename from 'gulp-rename';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
@@ -71,9 +71,9 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
- gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img'));
+gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+.pipe(svgo())
+.pipe(gulp.dest('build/img'));
 
 const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
