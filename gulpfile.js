@@ -80,7 +80,7 @@ const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(stacksvg({
-      output: 'sprite.svg'
+      output: 'sprite'
     }))
     .pipe(gulp.dest('build/img'));
 }
