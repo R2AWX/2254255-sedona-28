@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
     <div class="page__wrapper">
@@ -115,7 +115,7 @@
             </fieldset>
 
             <fieldset class="form-container__group attractions">
-              <legend class="form-container__legend">Посещённые<br> достопримечательности:</legend>
+              <legend class="form-container__legend">Посещённые<br>достопримечательности:</legend>
               <ul class="attractions__list attractions__list-wrapper">
                 <li class="attractions__items">
                   <label class="attractions__label">
@@ -150,7 +150,7 @@
 
             <fieldset class="form-container__group comment">
               <legend class="form-container__legend">Опишите свои эмоции:</legend>
-              <textarea class="comment__form-field" type="text" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="comment__form-field" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
 
             <div class="form-container__button-wrapper">
@@ -188,11 +188,39 @@
           </div>
 
           <div class="footer__copyright copyright">
-            <span class="copyright__text">Разработано:</span>
-            <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span class="copyright__text">Разработано</span>
+              <span  class="visually-hidden">HTML Academy</span>
+            </a>
           </div>
         </div>
       </footer>
+    </div>
+
+    <div class="modal-success modal-success__container modal-success--close">
+      <section class="modal-success__block">
+        <div class="modal-success__text-wrapper">
+          <h2 class="modal-success__lead">Ваш отзыв отправлен!</h2>
+          <p class="modal-success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+
+        <div class="modal-success__button-wrapper">
+          <button class="modal-success__button" type="button">Закрыть окно</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-failure modal-failure__container modal-failure--close">
+      <section class="modal-failure__block">
+        <div class="modal-failure__text-wrapper">
+          <h2 class="modal-failure__lead">Что-то пошло&ensp;<br class="modal-failure__br">не так!</h2>
+          <p class="modal-failure__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        </div>
+
+        <div class="modal-failure__button-wrapper">
+          <button class="modal-failure__button" type="button">Ок</button>
+        </div>
+      </section>
     </div>
 
     <script src="js/script.js"></script>

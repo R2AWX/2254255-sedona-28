@@ -9,13 +9,13 @@
     content: "";
     position: absolute;
     top: -62px;
-    right: -17px;
+    right: -29px;
     bottom: -8px;
     border-right: 1px solid @disabled;
   }
 
   @media (min-width: @desktop-width) {
-    right: -24px;
+    right: -50px;
   }
 }
 
@@ -30,6 +30,7 @@
 }
 
 .full-name__form-field {
+  font-family: inherit;
   .font-size-lead-mobile();
   height: 58px;
   width: 100%;
@@ -42,10 +43,6 @@
   &:focus {
     background-color: @disabled;
     outline: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    .font-size-lead();
   }
 }
 

@@ -1,12 +1,8 @@
 .impressions {
   margin-bottom: 49px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 48px;
-  }
-
   @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 73px;
   }
 }
 
@@ -41,10 +37,6 @@
 
 .impressions__description {
   .font-size-lead-mobile();
-
-  @media (min-width: @tablet-width) {
-    .font-size-lead();
-  }
 }
 
 .impressions__list-wrapper {
@@ -53,11 +45,13 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 36px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
+    margin: 18px 10px 0 53px;
   }
 }
 

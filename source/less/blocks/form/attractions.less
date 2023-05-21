@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 56px;
+    margin-bottom: 86px;
   }
 }
 
@@ -47,10 +47,6 @@
 
 .attractions__description {
   .font-size-lead-mobile();
-
-  @media (min-width: @tablet-width) {
-    .font-size-lead();
-  }
 }
 
 .attractions__list-wrapper {
@@ -60,11 +56,13 @@
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 32px;
+    margin: 0 84px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 64px;
+    margin: 32px 44px 0;
   }
 }
 
