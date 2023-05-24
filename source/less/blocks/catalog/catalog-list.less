@@ -46,7 +46,7 @@
   }
 }
 
-.catalog-list__secondary-wrapper {
+.catalog-list__list-wrapper {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -65,6 +65,12 @@
 
     &:last-child {
       margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      grid-column: ~"1 / -1";
     }
   }
 }
